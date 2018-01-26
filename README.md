@@ -1,9 +1,5 @@
----
-title: "Travailler avec R Markdown"
-author: "Audrey Bourret"
-date: "31 janvier 2018, 14h, D7-2021"
-output: html_document
----
+# Travailler avec R Markdown"
+Audrey Bourret
 
 ### Objectifs de la rencontre
 
@@ -34,8 +30,12 @@ head(iris, n=3L)
 plot(iris$Sepal.Length, iris$Petal.Length, xlab = "Sepal Length", ylab = "Petal Length")
 ```
 
-<img src="figure/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
+<img src="img/unnamed-chunk-1-1.png" title="plot of chunk unnamed-chunk-1" alt="plot of chunk unnamed-chunk-1" style="display: block; margin: auto;" />
 
 ### Pré-requis à la rencontre
 
 Si possible, avoir son portable avec R installé, c'est tout!
+
+### Vous trouverez dans ce répertoire
+
+Les fichiers nécessaires à la réalisation de l'exercice
