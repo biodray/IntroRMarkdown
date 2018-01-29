@@ -1,12 +1,28 @@
-# Exemple
-# Produire un "output" directement dans R
+#################################################################
+# EXEMPLE de transformation d'un fichier .Rmd directement dans R
+# Audrey Bourret
+# 31 janvier 2018
+#################################################################
+
+#### Packages nécessaires ####
+
+# install.packages(c("rmarkdown","knitr"))
+
 library(rmarkdown)
 library(knitr)
 
-# setwd("...")
+#### Vérifier si pandoc est installé sur l'ordinateur ####
 
 rmarkdown::pandoc_available()
 
+# Si "TRUE", tout est OK
+# Si "FALSE", installer pandoc: http://pandoc.org/installing.html
+
+#### Désigner le répertoire de travail ####
+
+# setwd("...")
+
+#### Transformation ####
 # .Rmd --> .html
 rmarkdown::render("CodeSimple.Rmd") # .html
 
@@ -17,3 +33,4 @@ knit("CodeSimple.Rmd") # .md
 purl("CodeSimple.Rmd") # .R
 
 purl("CodeSimple.Rmd", output = " CodeSimple2.R", documentation = 2) # .R mais avec commentaires en md
+

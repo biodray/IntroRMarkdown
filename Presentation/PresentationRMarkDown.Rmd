@@ -20,12 +20,15 @@ head(iris, n=3L)
 ````
 
 
+_**f** pour mettre la présentation en plein écran_ 
+
 ## Pourquoi utiliser R Markdown?
 
 - Arrêter de faire du copier-coller entre R et un autre document!
 - Envoyer des résultats à un collaborateur
 - Collaborer plus facilement sur un code 
 - Pouvoir mettre à jour des rapports plus rapidement
+- Monter plus facilement un cours!
 
 
 ## R Markdown = Markdown + R
@@ -57,6 +60,12 @@ markdown: _un mot_
 
 ## Quelques pré-requis
 
+**Packages** `rmarkdown` & `knitr`
+```{r, eval = F}
+install.packages("rmarkdown")
+install.packages("knitr")
+```
+
 **Pandoc**:  Convertiseur de fichiers universel
 
 - Si vous utilisez Rstudio: inclus!
@@ -69,14 +78,8 @@ library (rmarkdown)
 rmarkdown::pandoc_available() # If TRUE, OK! 
 ```
 
-**Packages** `rmarkdown` & `knitr`
-```{r, eval = F}
-install.packages("rmarkdown")
-install.packages("knitr")
-```
 
-
-## Vu d'ensemble d'un code RMarkDown
+## Vue d'ensemble d'un code RMarkDown
 
 ![](img/CodeSimpleRmd.png)
 
@@ -131,7 +134,7 @@ output:
 
 ## Exercice #1a - Texte et code
 
-```{}
+```{r, eval=FALSE}
 ---
 output: html_document
 ---
@@ -145,14 +148,15 @@ Voici le jeu de donnée que je vais utiliser:
 
 ```
 
-Ne pas mettre les "|" !  
-Enregistrer le document en _.Rmd_
+**_Ne pas mettre les "|" !_**  
 
+Enregistrer le document en _.Rmd_  
 
-## Exercice #1b
+Voir [CodeSimple.Rmd](https://raw.githubusercontent.com/biodray/IntroRMarkdown/master/Materiel/CodeSimple.Rmd) pour un exemple
 
+## Exercice #1b - Transformation dans R
 
-Ouvrir une console R, et transformer le fichier .Rmd en .html, .md et .R
+Compiler le fichier .Rmd en .html, .md et .R (voir [EnvoieDirectDeR.R](https://raw.githubusercontent.com/biodray/IntroRMarkdown/blob/master/Materiel/EnvoieDirectDeR.R))
 
 ```{r, eval=FALSE}
 library(knitr)
@@ -172,7 +176,6 @@ purl("CodeSimple.Rmd") # .R
 purl("CodeSimple.Rmd", output = " CodeSimple2.R", documentation = 2)
 
 ````
-
 
 ## Option #2: Directement dans Rstudio
 
@@ -204,6 +207,7 @@ Liste
 
 ## Syntaxe de base de Markdown
 
+[Guide de références disponible](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
 ![](img/RefGuide1.png)  
 
 
@@ -215,9 +219,9 @@ Liste
 head(iris, n=3L)
 ````
 
-eval = FALSE : ne roule pas le code  
-include = FALSE : roule le code, mais montre ni le code, ni le résultat  
-echo = FALSE : roule le code mais montre seulement le résultat
+**eval = FALSE** : ne roule pas le code  
+**include = FALSE** : roule le code, mais montre ni le code, ni le résultat  
+**echo = FALSE** : roule le code mais montre seulement le résultat
 
 Il peut être pratique de donner un nom à chaque chunk (ici _exemple_)
 
@@ -230,7 +234,7 @@ head(iris, n=3L)
 
 ````
 
-L'option message est particulièrement utile lorsqu'on appele un package. 
+L'option **message** est particulièrement utile lorsqu'on appele un package. 
 
 
 ## Options des chunks
@@ -259,10 +263,7 @@ knitr::opts_chunk$set(echo=TRUE, fig.align="center")
 
 ```
 
-
-
-
-Beaucoup d'autres options sont disponibles, voir les guides!
+Beaucoup d'autres options sont disponibles, voir le [cheatsheet!](http://www.rstudio.com/wp-content/uploads/2016/03/rmarkdown-cheatsheet-2.0.pdf)
 
 ## Code directement dans le texte (_inline_)
 
@@ -280,14 +281,16 @@ kable(iris[1:2,])
 
 ````
 
+## Astuces - divers
 
-
+- Pour ajouter une ligne vide, utiliser `&nbsp;`
+- Pour anoter votre code, utiliser `<!-- comme en html-->`
 
 ## Ressources
 
-
-
-http://rmarkdown.rstudio.com/
+- http://rmarkdown.rstudio.com/
+- Baumer & Udwin (2015). [R Markdown](http://onlinelibrary.wiley.com/doi/10.1002/wics.1348/full). _WIREs Comput Stat, 7:167-177._ 
+- Documents liés à ce mini-atelier sur [github](https://github.com/biodray/IntroRMarkdown)
 
 
 **Maintenant c'est à vous de jouer avec tout ça!**
