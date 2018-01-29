@@ -9,7 +9,7 @@
 
 ### Ce document a justement été créé avec R Markdown!
 
-**R Markdown** permet de créer des documents où des bouts de texte et de code sont intercallés, ce qui facilite le travail et la collaboration en science! Adieu les copier-coller entre la console R et un document Word!!!
+**R Markdown** permet de créer des documents où des sections de texte et de code sont intercallés, ce qui facilite le travail et la collaboration en science. Adieu les copier-coller entre la console R et un document Word!!!
 
 
 ```r
@@ -33,7 +33,7 @@ plot(iris$Sepal.Length, iris$Petal.Length, xlab = "Sepal Length", ylab = "Petal 
 
 ### Pré-requis à la rencontre
 
-Si possible, avoir son portable avec R installé, c'est tout!
+Avoir un portable avec R installé, c'est tout!
 
 ### Vous trouverez dans ce répertoire
 
