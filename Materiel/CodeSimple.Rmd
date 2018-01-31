@@ -16,8 +16,7 @@ Les bouts de code R sont souvent sous forme de _Chunk_:
 ```{r iris}
 head(iris)
 plot(iris$Sepal.Length, iris$Petal.Length, xlab = "Sepal Length", ylab = "Petal Length")
-
-````
+```
 
 mais peuvent aussi être en _inline_, par exemple:
 
