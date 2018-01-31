@@ -18,19 +18,19 @@ rmarkdown::pandoc_available()
 # Si "TRUE", tout est OK
 # Si "FALSE", installer pandoc: http://pandoc.org/installing.html
 
-#### Désigner le répertoire de travail ####
+#### Désigner le répertoire de travail (si désiré) ####
 
 # setwd("...")
 
 #### Transformation ####
 # .Rmd --> .html
-rmarkdown::render("CodeSimple.Rmd") # .html
+rmarkdown::render("Materiel/CodeSimple.Rmd") # .html
 
 # .Rmd --> .md
-knit("CodeSimple.Rmd") # .md
+knit("Materiel/CodeSimple.Rmd", output = "Materiel/CodeSimple.md") # .md
 
 # .Rmd --> .R
-purl("CodeSimple.Rmd") # .R
+purl("Materiel/CodeSimple.Rmd", output = "Materiel/CodeSimple.R") # .R
 
-purl("CodeSimple.Rmd", output = " CodeSimple2.R", documentation = 2) # .R mais avec commentaires en md
+purl("Materiel/CodeSimple.Rmd", output = "Materiel/CodeSimple2.R", documentation = 2) # .R mais avec commentaires en md
 

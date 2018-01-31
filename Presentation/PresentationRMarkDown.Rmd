@@ -9,7 +9,7 @@ output:
 
 ## De quoi parle-t-on?
 
-Produire un document (_output_) **html**, **PDF**, **word** etc. qui inclue des parties de texte qui peuvent être formattées, et des bouts de codes R (ou autre), le tout à partir d'un document de type **Rmd** dans R.  
+Produire un document (_output_) **html**, **PDF**, **word** etc. qui inclue des parties de texte qui peuvent être formattées, et des bouts de codes R (ou autres), le tout à partir d'un document de type **Rmd** dans R.  
 
 **_Cette dispositive en est un bon exemple!_**
 
@@ -40,7 +40,7 @@ _**f** pour mettre la présentation en plein écran_
 
 Par exemple, mettre _un mot_ en italique:
 
-```{r, eval = F}
+```{r, eval = FALSE}
 html : <i>un mot</i>
 
 laTeX: \textit{un mot}
@@ -51,7 +51,7 @@ markdown: _un mot_
 
 ## R Markdown = Markdown + R
 
-**R Markdown** : Document Markdown, mais avec des "_chunk_" (bout) de code R intégrés
+**R Markdown** : Document Markdown, mais avec des "_chunks_" (bouts) de code R intégrés
 
 **.Rmd** &rarr; **.md** &rarr; **.html** (&rarr; **.doc** / **.pdf**)  
 
@@ -61,9 +61,9 @@ markdown: _un mot_
 ## Quelques pré-requis
 
 **Packages** `rmarkdown` & `knitr`
-```{r, eval = F}
-install.packages("rmarkdown")
+```{r eval=FALSE, message=FALSE, warning=FALSE}
 install.packages("knitr")
+install.packages("rmarkdown")
 ```
 
 **Pandoc**:  Convertiseur de fichiers universel
